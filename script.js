@@ -10,31 +10,19 @@ let num1 = document.getElementById('first-operand').textContent = `${firstOperat
 let sign = document.getElementById('operator').textContent = `${operand}`
 let num2 = document.getElementById('second-operand').textContent = `${secondOperator}`
 let result = document.getElementById('result')
-calculate()
+calculate(firstOperator, secondOperator)
 
 //the function doing its magic
-function calculate(){
-    function add(firstOperator, secondOperator){
+function calculate(firstOperator, secondOperator){
         if (operand === '+'){
-        result.textContent = parseInt(firstOperator) + parseInt(secondOperator)
-        console.log(result)
-        }
-        else{
-            alert("Incorrect sign for addition")
-        }
-    }
-    add(firstOperator, secondOperator);
-    /*function multiply(){
-        //
-    }
-    multiply();
-    function subtract()
-    }
-    subtract();
-    function divide(){
-        //
-    }
-    function divide(){
-
-    }*/
+            result.textContent = parseInt(firstOperator) + parseInt(secondOperator)
+        }else if (operand === '*'){
+            result.textContent = parseInt(firstOperator) * parseInt(secondOperator)
+        }else if(operand === '/'){
+            result.textContent = parseInt(firstOperator) / parseInt(secondOperator)
+        }else if(operand === '-'){
+            result.textContent = parseInt(firstOperator) - parseInt(secondOperator)
+        }else{
+            alert("Check the sign you entered")
+        }   
 }
