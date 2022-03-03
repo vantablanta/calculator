@@ -26,3 +26,9 @@ p{
 #equal-sign{
     color: green;
 }
+hr{
+    margin-top: 10px;
+}
+h3{
+    text-align: center;
+}
